@@ -4,14 +4,20 @@
 
 ### Development Environment
 
-1. Install WSL
+1. Install WSL (Windows Subsystem for Linux)
     - Open powershell and run `wsl --install`
     - https://learn.microsoft.com/en-us/windows/wsl/install
 2. Restart machine and set your password for your Linux subsystem
 3. Install Homebrew https://brew.sh/
     - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-    
-4. Complete brew setup:
+
+
+```
+📝 The following commands will all be in WSL. If you've closed WSL, open again by typing WSL in your windows menu, or by hitting windows+r and running `wsl`)
+```
+
+
+4. Complete brew setup
 ```sh
 ==> Next steps:
 - Run these three commands in your terminal to add Homebrew to your PATH:
@@ -32,3 +38,35 @@
     - `brew install git`
  6. Install an Integrated Development Environment (code editor)
     - I recommend VS Code as a good starting point
+    - https://code.visualstudio.com/
+ 7. Setup github and ssh keys
+    - Assuming there are no preexisting SSH keys, setup is as follows:
+    - Create an ssh key in your WSL terminal: `ssh-keygen -t ed25519 -C "your_email@example.com"`
+        - Make sure to replace your email in the above command.
+        - You can enter a passphrase if you'd like, but skipping the prompts is fine.
+    - Copy the SSH key you've just made, which you can output with the following command: `cat  ~/.ssh/id_ed25519.pub`
+    - Enter the key into your github account settings: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
+    - Reference: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+ 8. Clone this repository:
+    - Navigate to https://github.com/Snowrries/yufine-training
+    - Click the green `Code` button
+    - On the SSH tab, copy the topmost text:
+    - git@github.com:Snowrries/yufine-training.git
+    - In WSL, navigate to where you'd like this folder to be created. If you don't have a preference, the root directory is fine (`~/`)
+    - Clone with the following command:
+        - `git clone git@github.com:Snowrries/yufine-training.git`
+ 9. Open this repository in VS Code!
+    - An easy way to locate the folder in your windows system:
+        - Navigate into your code folder: `cd yufine-training`
+        - Open in code: `code .`
+        - This should open VS code with the workspace rooted at your current directory, which should show where exactly this repo lives in your windows filesystem. If you had cloned your repo at root, it is likely located at: `\\wsl.localhost\Ubuntu\home\{your username}\yufine-training`
+
+At this point, you should be set up to start writing code.
+
+ ### Local development
+
+ #### Prerequisites
+    - virtualenvironment
+    - python
