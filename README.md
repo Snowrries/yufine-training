@@ -34,8 +34,10 @@
 - Further documentation:
     https://docs.brew.sh
  ```
- 5. Install git
+ 5. Install and configure git
     - `brew install git`
+    - `git config --global user.email "you@example.com"`
+    - `git config --global user.name "Your Name"`
  6. Install an Integrated Development Environment (code editor)
     - I recommend VS Code as a good starting point
     - https://code.visualstudio.com/
