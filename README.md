@@ -88,3 +88,16 @@ Make sure you complete openssl setup:
 ```
 echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/openssl@3/bin:$PATH"' >> ~/.profile
 ```
+
+```
+sudo apt-get update
+sudo apt install python3 python3-pip ipython3
+sudo apt install python3-flask
+```
+
+Run the app:
+```
+export FLASK_APP=helloworld.py
+export FLASK_ENV=development
+flask run
+```
