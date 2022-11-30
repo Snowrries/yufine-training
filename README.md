@@ -88,39 +88,3 @@ Make sure you complete openssl setup:
 ```
 echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/openssl@3/bin:$PATH"' >> ~/.profile
 ```
-
-```
-export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/openssl@3/lib"
-export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/openssl@3/include"
-
-pyenv install 3.8.2
-sudo apt install zlib1g-dev
-pyenv init
-```
-
-Open your .profile file with
-```
-code ~/.profile
-```
-and append the setup lines as per init
-```
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-```
-
-```
-📝 Make sure to restart your terminal after running pyenv init, so that the setup commands added to your .profile run
-```
-
-
-Install a virtual environment manager
-Return to your code repository and install pyenv-virtualenv
-
-```
-cd ~/workspace/yufine-training/
-brew install pyenv-virtualenv
-
-pyenv install 3.8.2
-```
-Hack: This duplicate pyenv install may not be necessary, it was a problem for one user.
