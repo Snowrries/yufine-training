@@ -72,3 +72,19 @@ At this point, you should be set up to start writing code.
  #### Prerequisites
     - virtualenvironment
     - python
+
+Install Flask
+
+https://flask.palletsprojects.com/en/2.2.x/installation/
+- Ensure you have Python 3.7 or newer
+
+Install a python environment manager and its dependencies
+https://github.com/pyenv/pyenv/wiki/common-build-problems
+```
+brew install pyenv openssl
+```
+
+Make sure you complete openssl setup:
+```
+echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/openssl@3/bin:$PATH"' >> ~/.profile
+```
