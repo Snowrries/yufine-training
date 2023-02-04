@@ -1,5 +1,20 @@
 # yufine-training
 
+## Github Codespaces setup
+
+1. Create a feature branch in github and open codespaces for that branch
+https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository
+2.  Install flask and run 
+```
+pip install flask
+
+export FLASK_APP=helloworld.py
+export FLASK_ENV=development
+flask run
+```
+3. Visit your site at the printed URL in your terminal. For ex:
+* Running on http://127.0.0.1:5000
+
 ## Windows setup from scratch
 
 ### Development Environment
