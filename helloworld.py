@@ -22,3 +22,13 @@ def add():
     output += f" = {sum}"
     
     return output
+
+@app.route("/calculate/", methods=['GET', 'POST'])
+def calculate():
+    # take a valid equation as a string
+    # Return the result of the computed equation
+
+    # EX:
+    # input: "(2365 + 3 - 2) / 2"
+    # output: 1183
+    return ""
