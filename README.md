@@ -15,6 +15,9 @@ flask run
 3. Visit your site at the printed URL in your terminal. For ex:
 * Running on http://127.0.0.1:5000
 
+4. To use external applications to query your application, select the antenna on the lower left corner of Codespaces, and right click the port.
+    Change port visibility to public.
+
 ## Windows setup from scratch
 
 ### Development Environment
